@@ -2,14 +2,15 @@
 
 {
   home.packages = (with pkgs; [
-    xtb
-    pegamoid
-    gabedit
-    molden
     avogadro
     avogadro2
     gnuplot_qt
     marvin
+  ]) ++ (with pkgs.qchem; [
+    xtb
+    pegamoid
+    gabedit
+    molden
     vmd
-  ]);
+    ]);
 }
