@@ -36,6 +36,26 @@
       enable = true;
       shellAliases = { # alle bash aliase, die sonst BEI MIR in der .bashrc stehen
         ll = "ls -lah";
+        tailf = "tail -F -n 100 ---disable-inotify";
+        ".." = "cd ..";
+        "..." = "cd ../..";
+        sqpa = "squeue -o \"%.8A %.12P %35j %.10u %.3t %.10M %.6D %.16R %S\"";
+        sq = "sqpa -u ca82pez";
+        qme = "qsm && sqpa -u ca82pez";
+        countme = "qme | grep -v 'JOBID' | awk '{print NR}' | tail -n 1";
+        sqa = "squeue";
+        si = "sinfo";
+        sii = "sinfo | grep \"idle\"";
+        sc = "scancel";
+        mysacct = "sacct --format=\"JobID,JobName,NodeList,AllocCPU,CPUTime,TotalCPU,MaxRSS,Elapsed,State\" -j";
+        fchk09 = "/cluster/apps/g09/g09/formchk -3";
+        fchk = "/cluster/apps/g16/g16/formchk";
+        unfchk = "/cluster/apps/g16/g16/unfchk";
+        g09rr = "/home/ca82pez/scripts/g09rr.py";
+        sumnodes = "sh /home/ca82pez/scripts/sumnodes.sh";
+        top = "top -u ca82pez";
+        testnodes = "sh /home/ca82pez/scripts/testnodes.sh";
+        black = "black -l 79";
       };
       # See also https://scriptim.github.io/bash-prompt-generator/ for help
       # einfach ein String, den er mit in die .bashrc reinschreibt
