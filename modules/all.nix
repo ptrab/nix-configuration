@@ -45,6 +45,8 @@
       '';
     };
 
+    fish.enable = false;
+
     tmux = {
       enable = false;
       clock24 = true;
@@ -57,7 +59,6 @@
 
   home.packages = with pkgs; [
     htop
-    home-manager
     nano
     btop
     vim
