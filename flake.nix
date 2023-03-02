@@ -29,8 +29,8 @@
         inherit pkgs;
 
         modules = [
-            ./modules/ca82pez.nix # welches home gemanaged werden soll
-            ./modules/all.nix # konfigurationen, die fuer jeden rechner, unabhaengig von dessen verwendungszweck
+            ./modules/ca82pez.nix # welches home gemanaged werden soll also $USER.nix quasi
+            ./modules/all.nix # konfigurationen, die fuer jeden rechner gelten, unabhaengig von dessen verwendungszweck
             ./modules/chemistry.nix # alle "chemie"-relevanten programme
             ];
         

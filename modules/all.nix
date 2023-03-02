@@ -10,7 +10,7 @@
         primary = true;
         realName = "Philipp Traber";
         address = "draabaar@gmail.com";
-        # flavor = "gmail.com";
+        flavor = "gmail.com";
       };
     };
   };
@@ -40,8 +40,8 @@
         ".." = "cd ..";
         "..." = "cd ../..";
         sqpa = "squeue -o \"%.8A %.12P %35j %.10u %.3t %.10M %.6D %.16R %S\"";
-        sq = "sqpa -u ca82pez";
-        qme = "qsm && sqpa -u ca82pez";
+        sq = "sqpa -u $USER";
+        qme = "qsm && sqpa -u $USER";
         countme = "qme | grep -v 'JOBID' | awk '{print NR}' | tail -n 1";
         sqa = "squeue";
         si = "sinfo";
@@ -53,7 +53,7 @@
         unfchk = "/cluster/apps/g16/g16/unfchk";
         g09rr = "/home/ca82pez/scripts/g09rr.py";
         sumnodes = "sh /home/ca82pez/scripts/sumnodes.sh";
-        top = "top -u ca82pez";
+        top = "top -u $USER";
         testnodes = "sh /home/ca82pez/scripts/testnodes.sh";
         black = "black -l 79";
       };

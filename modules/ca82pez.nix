@@ -9,5 +9,7 @@
     programs.bash.bashrcExtra = ''
       source /nix/var/nix/profiles/default/etc/profile.d/nix.sh
       source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh      
+
+      export LD_PRELOAD=/lib64/libnss_sss.so.2
     '';
 }
